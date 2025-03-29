@@ -4,19 +4,18 @@
 // Tema 1 - Cadastro das Cartas
 
 int main() {
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    // Variáveis da 1ª carta
-    char estado_1; // A letra que representa o estado de 'A' a 'H'
-    char id_1[10]; // O código da Cidade, formado pela letra + um numero de '01' a '04'
+    // Variáveis da 1ª Carta
+    char estado_1; // Código do Estado, uma letra de 'A' a 'H'
+    int id_1; // O código da Cidade, um numero de '01' a '04'
     char cidade_1[20]; // Nome da Cidade
     int populacao_1; // População da Cidade
     float areaKm_1; // A área da Cidade em Km²
     float PIB_1; // Produto Interno Bruto(PIB) da Cidade
     int pontosTuris_1; // Quantidade de pontos Turísticos da Cidade
 
-    // Variáveis da 2ª carta
-    char estado_2; // A letra que representa o estado de 'A' a 'H'
-    char id_2[10]; // O código da Cidade, formado pela letra + um numero de '01' a '04'
+    // Variáveis da 2ª Carta
+    char estado_2; // Código do Estado, uma letra de 'A' a 'H'
+    int id_2; // O código da Cidade, formado pela letra + um numero de '01' a '04'
     char cidade_2[20]; // Nome da Cidade
     int populacao_2; // População da Cidade
     float areaKm_2; // A área da Cidade em Km²
@@ -24,12 +23,62 @@ int main() {
     int pontosTuris_2; // Quantidade de pontos Turísticos da Cidade
 
     // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
+    // Cadastro da 1ª Carta:
+    printf("Insira o Código do Estado(Uma Letra de 'A' a 'H'): ");
+    scanf("%c", &estado_1);
+    printf("Insira o Código da Cidade(Um Número de '01' a '04'): ");
+    scanf("%i", &id_1);
+    printf("Insira o Nome da Cidade: ");
+    scanf("%s", cidade_1); // Isso não funciona com nomes compostos
+    printf("Insira a População da Cidade: ");
+    scanf("%i", &populacao_1);
+    printf("Insira área da Cidade em Km²: ");
+    scanf("%f", &areaKm_1);
+    printf("Insira o PIB da Cidade: ");
+    scanf("%f", &PIB_1);
+    printf("Insira a quantidade de Pontos Turisticos da Cidade: ");
+    scanf("%i", &pontosTuris_1);
+    printf("Primeira carta cadastrada!\n\n");
+
+    // Cadastro da 2ª Carta:
+    printf("Insira o Código do Estado(Uma Letra de 'A' a 'H'): ");
+    scanf(" %c", &estado_2);
+    printf("Insira o Código da Cidade(Um Número de '01' a '04'): ");
+    scanf("%i", &id_2);
+    printf("Insira o nome da Cidade: ");
+    scanf("%s", cidade_2); // Isso continua não funcionando com nomes compostos
+    printf("Insira a população da Cidade: ");
+    scanf("%i", &populacao_2);
+    printf("Insira a área da Cidade em Km²: ");
+    scanf("%f", &areaKm_2);
+    printf("Insira o PIB da Cidade: ");
+    scanf("%f", &PIB_2);
+    printf("Insira a quantidade de pontos turísticos da Cidade: ");
+    scanf("%i", &pontosTuris_2);
+    printf("Segunda carta cadastrada!\n");
+
     // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    // Primeira Carta
+    printf("\n\n=== Dados da 1ª Carta ===\n");
+    printf("Código do Estado: %c\n", estado_1);
+    printf("Código da Cidade: %i\n", id_1);
+    printf("Código da Carta: %c%i\n",estado_1 , id_1); // Isso é uma gambiarra gigante, mas funciona!
+    printf("Nome da Cidade: %s\n", cidade_1);
+    printf("População da Cidade: %i\n", populacao_1);
+    printf("Área da Cidade: %.2fKm²\n", areaKm_1);
+    printf("PIB da Cidade: R$%.2f\n", PIB_1);
+    printf("Quantidade de Pontos Turisticos da Cidade: %i\n", pontosTuris_1);
+
+    // Segunda Carta
+    printf("\n\n=== Dados da 2ª Carta ===\n");
+    printf("Código do Estado: %c\n", estado_2);
+    printf("Código da Cidade: %i\n", id_2);
+    printf("Código da Carta: %c%i\n",estado_2 , id_2); // É a mesma gambiarra de antes!
+    printf("Nome da Cidade: %s\n", cidade_2);
+    printf("População da Cidade: %i\n", populacao_2);
+    printf("Área da Cidade: %.2fKm²\n", areaKm_2);
+    printf("PIB da Cidade: R$%2.f\n", PIB_2);
+    printf("Quantidade de Pontos Turisticos da Cidade: %i\n", pontosTuris_2);
 
     return 0;
 }
